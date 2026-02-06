@@ -1,0 +1,20 @@
+const checkIfPalindrome = (input) => {
+    let left = 0;
+    let right = input.length - 1;
+    while (left < right) {
+        if (input[left] !== input[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+
+// OR
+
+// const checkIfPalindrome = (input) => {
+//     return input === input.split('').reverse().join('');
+// }
+
+console.log(checkIfPalindrome("racecar"));
